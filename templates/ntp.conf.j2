@@ -1,0 +1,29 @@
+# {{ ansible_managed }}
+
+{% if ntp_mode == 'server' %}
+statistics {{ ntp_statistics }}
+
+{% for filegen in ntp_filegens %}
+filegen {{ filegen }}
+{% endfor %}
+
+{% for server in ntp_servers %}
+server {{ server }} iburst
+restrict {{ server }} nomodify notrap noquery
+{% endfor %}
+
+{% for listen in ntp_listens %}
+interface listen {{ listen }}
+{% endfor %}
+
+{% for restrict in ntp_restricts %}
+restrict {{ restrict }}
+{% endfor %}
+
+server 127.127.1.0
+fudge 127.127.1.0 stratum 10
+{% else %}
+{% for server in ntp_servers %}
+server {{ server }} iburst maxpoll 9
+{% endfor %}
+{% endif %}

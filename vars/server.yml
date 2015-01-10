@@ -1,0 +1,23 @@
+---
+# NTP Server Config settings
+ntp_servers: 
+- '0.amazon.pool.ntp.org'
+- '1.amazon.pool.ntp.org'
+- '3.amazon.pool.ntp.org'
+- '4.amazon.pool.ntp.org'
+
+ntp_filegens:
+- 'loopstats file loopstats type day enable'
+- 'peerstats file peerstats type day enable'
+- 'clockstats file clockstats type day enable'
+
+ntp_restricts:
+- '-4 default kod notrap nomodify nopeer noquery'
+- '-6 default kod notrap nomodify nopeer noquery'
+- '127.0.0.1'
+- '::1'
+
+ntp_statistics: 'loopstats peerstats clockstats'
+
+ntp_listens: 
+- '127.0.0.1'
