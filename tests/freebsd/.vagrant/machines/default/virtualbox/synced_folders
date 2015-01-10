@@ -1,0 +1,1 @@
+{"nfs":{"vagrant-root":{"nfs":true,"id":"vagrant-root","guestpath":"/vagrant","hostpath":"/Users/sgarlick/repos/rws/ntp-ansible-role/tests/freebsd","disabled":false,"type":"nfs","map_uid":502,"map_gid":20,"nfs_udp":true,"nfs_version":3,"uuid":"1421308162"}}}
