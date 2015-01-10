@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Role Name
 =========
 
@@ -36,3 +37,7 @@ Author Information
 ------------------
 
 An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+=======
+# ntp-ansible-role
+NTP Ansible Role
+>>>>>>> 4b37756207ef741533c7c921e4cd6f2953909a6a
