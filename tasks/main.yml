@@ -5,7 +5,7 @@
 
 - name: OS Specific Variables
   include_vars: "{{ ansible_distribution }}.yml"
-  
+
 - name: ntp mode Specific Variables
   include_vars: "{{ ntp_mode }}.yml"
 
@@ -20,4 +20,4 @@
   template: src="ntp-{{ ntp_mode }}.conf.j2" dest="/etc/ntp.conf"
 
 - name: ntp is restarted and enabled
-  service: name={{ ntp_service }} state=started enabled=yes
+  service: name={{ ntp_service }} state=restarted enabled=yes
