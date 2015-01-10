@@ -1,0 +1,5 @@
+---
+- debug: msg="FreeBSD Packages"
+
+- name: ntp is installed
+  pkgng: pkg={{ ntp_package }} state=present

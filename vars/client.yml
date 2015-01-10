@@ -1,5 +1,5 @@
 ---
 # NTP Client Config Settings
 ntp_servers: 
+- 'ntp0.ec2.gc'
 - 'ntp1.ec2.gc'
-- 'ntp2.ec2.gc'

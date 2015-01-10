@@ -1,0 +1,5 @@
+---
+- debug: msg="Ubuntu Packages"
+
+- name: ntp is installed
+  apt: pkg={{ ntp_package }} state=installed
