@@ -1,3 +1,4 @@
 ---
 # defaults file for ntp-ansible-role
 ntp_mode: client
+ntp_package: openntp

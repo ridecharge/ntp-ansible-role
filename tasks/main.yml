@@ -5,10 +5,10 @@
   include_vars: "{{ ntp_mode }}.yml"
 
 - name: ntp is installed
-  apt: pkg=ntp state=installed
+  apt: pkg={{ ntp_package }} state=installed
 
 - name: ntp is configured
-  template: src=ntp.conf.j2 dest=/etc/ntp.conf
+  template: src="ntp-{{ ntp_mode }}.conf.j2" dest=/etc/ntp.conf
 
 - name: ntp is restarted and enabled
   service: name=ntp state=restarted enabled=yes
