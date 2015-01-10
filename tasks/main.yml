@@ -3,7 +3,7 @@
 
 - name: ntp mode Specific Variables
   include_vars: "{{ ntp_mode }}.yml"
-  
+
 # OS Specific packages
 - include: 'Ubuntu.yml'
   when: ansible_distribution == 'Ubuntu'
@@ -12,7 +12,7 @@
   when: ansible_distribution == 'FreeBSD'
 
 - name: ntp is configured
-  template: src="ntp-{{ ntp_mode }}.conf.j2" dest=/etc/ntp.conf
+  template: src="ntp-{{ ntp_mode }}.conf.j2" dest="/etc/ntp.conf"
 
 - name: ntp is restarted and enabled
-  service: name={{ ntp_package }} state=restarted enabled=yes
+  service: name=ntp state=restarted enabled=yes

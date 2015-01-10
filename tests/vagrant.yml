@@ -4,3 +4,4 @@
     - ntp
   vars:
     ansible_python_interpreter: "/usr/bin/env python"
+    ntp_mode: server
