@@ -12,10 +12,6 @@ server {{ server }} iburst
 restrict {{ server }} nomodify notrap noquery
 {% endfor %}
 
-{% for listen in ntp_listens %}
-interface listen {{ listen }}
-{% endfor %}
-
 {% for restrict in ntp_restricts %}
 restrict {{ restrict }}
 {% endfor %}

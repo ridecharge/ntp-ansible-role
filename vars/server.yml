@@ -18,6 +18,3 @@ ntp_restricts:
 - '::1'
 
 ntp_statistics: 'loopstats peerstats clockstats'
-
-ntp_listens: 
-- '127.0.0.1'
