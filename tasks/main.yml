@@ -19,5 +19,7 @@
 - name: ntp is configured
   template: src="ntp-{{ ntp_mode }}.conf.j2" dest="/etc/ntp.conf"
 
+- copy: src="scripts/dns.py" dest="/tmp/dns.py" mode=0550 owner=root
+
 - name: ntp is restarted and enabled
   service: name={{ ntp_service }} state=restarted enabled=yes

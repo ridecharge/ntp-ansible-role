@@ -1,5 +1,5 @@
 # {{ ansible_managed }}
 
 {% for server in ntp_servers %}
-server {{ server }} iburst maxpoll 9
+server {{ server }} iburst dynamic
 {% endfor %}
