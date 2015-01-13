@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import boto.utils
 import boto.route53
 import sys
