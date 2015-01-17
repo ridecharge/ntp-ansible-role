@@ -1,5 +1,5 @@
 ---
 # NTP Client Config Settings
 ntp_servers: 
-- 'ntp-1a.ec2.gc'
-- 'ntp-1c.ec2.gc'
+- '10.251.0.5'
+- '10.251.64.5'
