@@ -3,3 +3,5 @@
 
 - name: ntp is installed
   apt: pkg={{ ntp_package }} state=installed
+
+- copy: src=Ubuntu-config_network_interface.sh dest=/tmp/config_network_interface.sh
