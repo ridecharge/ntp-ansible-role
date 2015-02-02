@@ -1,7 +1,7 @@
 ntp
 =========
 
-Installs and configures the NTP service on host and client machines.
+Installs and configures the NTP service on server and client machines.
 
 Requirements
 ------------
