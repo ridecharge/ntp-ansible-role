@@ -1,7 +1,7 @@
 #!/bin/bash
 ETH=$1
 while [ -z "$(ifconfig -a | grep $ETH)" ]; do sleep 3s; done;
-cat /etc/network/interfaces.d/eth0.cfg | sed 's/eth0/$ETH/g' > /etc/network/interfaces.d/$ETH.cfg
+cat /etc/network/interfaces.d/eth0.cfg | sed s/eth0/$ETH/g > /etc/network/interfaces.d/$ETH.cfg
 ifup $ETH
 echo "200 out" >> /etc/iproute2/rt_tables
 GATEWAY=$(route -n | awk 'FNR == 3 {print $2}')
