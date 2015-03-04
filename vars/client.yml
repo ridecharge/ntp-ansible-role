@@ -1,5 +1,5 @@
 ---
 # NTP Client Config Settings
 ntp_servers: 
-- '10.251.0.5'
-- '10.251.64.5'
+- 'ntp001.gocurb.internal'
+- 'ntp002.gocurb.internal'
