@@ -3,5 +3,3 @@
 
 - name: ntp is installed
   apt: pkg={{ ntp_package }} state=installed
-
-- copy: src=Ubuntu-config_network_interface.sh dest=/root/config_network_interface.sh mode=0500
